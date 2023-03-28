@@ -1,0 +1,6 @@
+.top-background {
+  background-image: url("../images/private-party-venues.png");
+  height: 25vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
