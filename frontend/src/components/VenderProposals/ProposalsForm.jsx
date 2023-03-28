@@ -1,6 +1,9 @@
 import React, { useState } from "react";
+import axios from "axios";
+import { useNavigate } from "react-router-dom";
 import "./ProposalsForm.css";
 const ProposalsForm = () => {
+  const navigate = useNavigate();
   const [eventName, setEventName] = useState("");
   const [placeOfEvent, setPlaceOfEvent] = useState("");
   const [proposalType, setProposalType] = useState("");
@@ -82,6 +85,24 @@ const ProposalsForm = () => {
     for (let i = 0; i < postImage.length; i++) {
       formData.append("images", postImage[i]);
     }
+    const objsubmit = {
+      eventName :eventName,
+      placeOfEvent:placeOfEvent,
+      proposalType :proposalType,
+      eventType:eventType,
+      budget:budget,
+      fromDate:fromDate,
+      toDate:toDate,
+      description:description,
+      foodPreferences:foodPreferences,
+      events:events,
+      postImage:postImage,
+
+    }
+axios.post("http://localhost:8080/createProposals",objsubmit)
+.then(response=>console.log(response))
+.then(()=>navigate("/proposalsData/"))
+.catch(error=>console.log(error))
   };
   return (
     <section className="container">

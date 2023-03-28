@@ -12,10 +12,11 @@ router.use(bodyParser.json());
 
 
 
-router.post('venderlogin',async(req,res)=>{
+router.post('/venderlogin',async(req,res)=>{
     try{
         const {contact,password}=req.body;
         const vendor = await Vendor.findOne({contact:contact});
+        console.log("i am here")
         if(!vendor){
             res.status(201).json({
                 status:"failed",

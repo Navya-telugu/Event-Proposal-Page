@@ -34,10 +34,10 @@ const VenderSchema = new Schema({
         type: String, 
         required: true
     },
-    images: {
-        type: [String],
-        required:true
-    },
+    // images: {
+    //     type: [String],
+    //     required:true
+    // },
     foodPreferences:{
         type: String,
         required: true
