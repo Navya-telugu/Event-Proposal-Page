@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link,useNavigate} from "react-router-dom";
-// import ProductContext from "./context/ProductContext";
+//import ProductContext from "./context/ProductContext";
 import ProductsInCart from "./SelectedEvents";
 import "./userComponents/Home.css";
 import event1 from "./eventImages/event1.jpg";
@@ -20,7 +20,7 @@ import UserHeader from "./headers/userHeader";
 const Products = ({ items }) => {
   const arr=[event1,event2,event3,event4,event5,event6,event7,event8,event9];
   const [vendorName,setVendorName]=useState([]);
-  // const token = `Bearer ${localStorage.getItem("token")}`;
+  //const token = `Bearer ${localStorage.getItem("token")}`;///
   const navigate = useNavigate();
   useEffect(()=>{
     if (localStorage.getItem("token") === null) {

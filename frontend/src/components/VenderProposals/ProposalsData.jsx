@@ -5,7 +5,7 @@ import Delete from "../images/bin.png";
 import Search from "../images/search.png";
 import { FaFilter } from "react-icons/fa";
 import Header from "../headers/header";
-import { useNavigate} from "react-router-dom";
+import { useNavigate,Link} from "react-router-dom";
 import axios from "axios";
 function ProposalsData() {
   const navigate = useNavigate();
@@ -120,12 +120,15 @@ function ProposalsData() {
                 </div>
                 <div>
                   Budget<p>{item.budget}</p>
+                  {console.log(item)}
                 </div>
               </section>
               <section className="edit-delete-container">
+                <Link to={`/updateproposal/${item._id}`}>
                 <button>
                   <img src={Edit} alt="edit" />
                 </button>
+                </Link>
                 <button
                   onClick={() => {
                     handleDelete(item._id);
