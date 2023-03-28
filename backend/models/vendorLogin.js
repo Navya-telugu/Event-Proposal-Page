@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 const {ObjectId} = mongoose.Schema.Types;
-const Schema=mongoose.Schema;
+const Schema =mongoose.Schema;
 const bcrypt = require('bcrypt');
 
 const vendorSchema = new mongoose.Schema({

@@ -4,6 +4,7 @@ const bodyParser=require("body-parser");
 const jwt=require('jsonwebtoken');
 const bcrypt = require("bcrypt");
 const router=express.Router();
+const JWT_SECRET_KEY = "jhgiffjbufjdlsjf";
 
 router.use(bodyParser.urlencoded({extended:false}));
 
@@ -11,18 +12,18 @@ router.use(bodyParser.json());
 
 
 
-router.post('/login',async(req,res)=>{
+router.post('venderlogin',async(req,res)=>{
     try{
         const {contact,password}=req.body;
-        const vendor=await Vendor.findOne({contact:contact});
+        const vendor = await Vendor.findOne({contact:contact});
         if(!vendor){
             res.status(201).json({
                 status:"failed",
                 message:"Contact does not exits kindly register",
             });
         }else{
-            const isPasswordMatching=await bcrypt.compare(password,vendor.password);
-            //const token=jwt.sign({exp:Math.floor(Date.now()/1000)+(6000000*60),vendor:vendor._id},'secret');
+            const isPasswordMatching = await bcrypt.compare(password,vendor.password);
+            const token=jwt.sign({exp:Math.floor(Date.now()/1000)+(6000000*60),vendor:vendor._id},JWT_SECRET_KEY);
             if(isPasswordMatching){
                 res.status(200).json({
                     status: "success",
