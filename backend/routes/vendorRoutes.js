@@ -76,6 +76,23 @@ router.get("/proposalsData", (req, res) => {
 });
 
 
+router.get('/update/:id', async (req, res) => {
+  try {
+      let data = await VenderData.find({ _id: req.params.id }, req.body);
+      let newdata = await VenderData.findOne({ _id: req.params.id });
+      return res.status(200).json({
+          newdata
+      })
+  }
+  catch (e) {
+      res.status(422).json({
+          status: "failure",
+          error: e.error
+      })
+  }
+})
+
+
 // update proposal
 router.put('/update/:id', async (req, res) => {
     try {
@@ -85,6 +102,8 @@ router.put('/update/:id', async (req, res) => {
             message: "updated successfully",
             newdata
         })
+        // console.log(req.body)
+        // console.log(req.params.id)
     }
     catch (e) {
         res.status(422).json({
