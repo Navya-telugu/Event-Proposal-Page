@@ -1,25 +1,24 @@
 const express = require("express");
 const app = express();
+var cors = require('cors');
+app.use(express.urlencoded({ extended: false }));
 const vendorRoute=require('./routes/vendorRoutes');
 const conn = require("./connection/connec");
 const port = 8080
 const userRegister=require("./routes/userRegister");
 const userLogin=require("./routes/userLogin");
-const jwt=require("jsonwebtoken");
+const venderRegister = require("./routes/VendorRegister")
+const venderLogin = require("./routes/VendorLogin")
+const jwt = require("jsonwebtoken");
 
-
-const registerRoute=require('./routes/VendorRegister');
-const loginRoute=require('./routes/VendorLogin');
-
-
-
-
-
-
+app.use(cors({
+    origin: 'http://localhost:3000',
+    credentials: true
+}));
 
 conn();
-app.use('/',registerRoute)
-app.use('/',loginRoute)
+app.use('/',venderRegister)
+app.use('/',venderLogin)
 app.use('/',vendorRoute)
 app.use('/',userRegister)
 app.use('/',userLogin)
@@ -32,7 +31,7 @@ app.use('/vendor',(req,res,next)=>{
             if(err){
                 return res.status(403).json({message:"token is not valid"});
             }
-            // req.Vendor=decoded.data
+            req.Vendor=decoded.data////
             next();
         });
     }

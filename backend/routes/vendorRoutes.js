@@ -3,8 +3,13 @@ const router = express.Router();
 const VenderData = require("../models/VendorModels");
 const path = require("path");
 const multer = require("multer");
+const cors = require("cors");
 
 router.use(express.json());
+router.use(cors({
+  origin: 'http://localhost:3000',
+  credentials: true
+}));
 
 // multer for files upload
 const storage = multer.diskStorage({
@@ -36,7 +41,7 @@ router.post("/createProposals",async (req, res) => {
     const images = req.files.map((file) => file.filename);
     const VendorsData = new VenderData({
       eventName,
-      images,
+       images,
       placeOfEvent,
       proposalType,
       eventType,
@@ -99,7 +104,7 @@ router.delete("/proposalDelete/:id", async (req, res) => {
 
 //get vendor details
 router.get("/vendorDetails", (req, res) => {
-    VenderDetails.find()
+    VenderData.find()
       .then((data) => {
         res.status(201).send({ data });
       })
@@ -111,8 +116,7 @@ router.get("/vendorDetails", (req, res) => {
 
   //get user details
 router.get("/userDetails", (req, res) => {
-  userDetails
-    .find()
+    Venderdata.find()
     .then((data) => {
       res.status(201).send({ data });
     })
