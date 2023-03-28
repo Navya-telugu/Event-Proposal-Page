@@ -38,10 +38,11 @@ router.post("/createProposals",async (req, res) => {
       foodPreferences,
       events,
     } = req.body;
-    const images = req.files.map((file) => file.filename);
+    //const images = req.files.map((file) => file.filename);
+    //console.log(images);
     const VendorsData = new VenderData({
       eventName,
-       images,
+      //  images,
       placeOfEvent,
       proposalType,
       eventType,
@@ -52,6 +53,7 @@ router.post("/createProposals",async (req, res) => {
       foodPreferences,
       events,
     });
+    console.log("vender")
 
     await VendorsData.save();
     res.status(201).send({ message: "Data submitted successfully" });
@@ -116,7 +118,7 @@ router.get("/vendorDetails", (req, res) => {
 
   //get user details
 router.get("/userDetails", (req, res) => {
-    Venderdata.find()
+  VenderData.find()
     .then((data) => {
       res.status(201).send({ data });
     })

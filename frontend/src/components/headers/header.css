@@ -4,6 +4,7 @@ body {
 .icons-container {
   display: flex;
   justify-content: space-between;
+  z-index: 9999;
   width: 100%;
   height: 4.375em;
   background: #ffffff 0% 0% no-repeat padding-box;
