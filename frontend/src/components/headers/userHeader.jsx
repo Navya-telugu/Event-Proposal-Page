@@ -31,7 +31,7 @@ const UserHeader = (props) => {
       <section className="icons-container">
       <h1>LOGO</h1>
         <section className="vender-box">
-          <span>{vname ? vname : "VendorName"}</span>
+          <span>{vname ? vname : "userName"}</span>
           <span>
             {" "}
             <FaUserCircle onClick={handleAvatarClick} style={{cursor:"pointer"}} size={35}/>

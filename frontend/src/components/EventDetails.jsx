@@ -17,8 +17,9 @@ const ProductDetails = () => {
   const { id } = useParams();
 
   const handleSubmit = () => {
-    setCount(count + 1);
-    setBasket([...basket, product]);
+   {basket?console.log("delete previous one"):
+      setCount(count+1) ;
+      setBasket([product]);}
   };
 
   console.log(eventImages);

@@ -39,17 +39,16 @@ const ProductsInCart = () => {
 
   return (
       <MDBRow>
-        <h4 style={{margin:"15px"}}>Selected</h4>
+        {basket[0]?<h4 style={{margin:"15px"}}>Selected</h4>:``}
+        
         <MDBCol md={12} lg={6}>
           {basket?.length === 0 ? (
             <div>
-              {/* <h5>You have not selected any event</h5>
-              <Link to="/home">
-                <button>
-                  Go Back
-                </button>
-              </Link> */}
+
+
             </div>
+
+
           ) : (
             basket?.map((_,index) => (
               <div>
