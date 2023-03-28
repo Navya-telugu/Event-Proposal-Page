@@ -1,0 +1,96 @@
+#errMsg-1 {
+  position: absolute;
+  top: 110px;
+  color: red;
+  width: 300px;
+  font-size: 12px;
+}
+
+#errmessage {
+  position: absolute;
+  top: 110px;
+  color: green;
+  width: 300px;
+  font-size: 12px;
+}
+#vendor-name {
+  position: absolute;
+  top: 130px;
+  width: 325px;
+  height: 50px;
+  background: #ffffff 0% 0% no-repeat padding-box;
+  border: 1px solid #4e94f4;
+  border-radius: 4px;
+  opacity: 1;
+  padding-left: 15px;
+}
+#vendor-email {
+  position: absolute;
+  top: 195px;
+  width: 325px;
+  height: 50px;
+  background: #ffffff 0% 0% no-repeat padding-box;
+  border: 1px solid #4e94f4;
+  border-radius: 4px;
+  opacity: 1;
+  padding-left: 15px;
+}
+
+#vendorContact {
+  position: absolute;
+  top: 258px;
+  width: 325px;
+  height: 50px;
+  background: #ffffff 0% 0% no-repeat padding-box;
+  border: 1px solid #4e94f4;
+  border-radius: 4px;
+  opacity: 1;
+  padding-left: 15px;
+}
+
+#vendor-passowrd {
+  position: absolute;
+  top: 320px;
+  width: 325px;
+  height: 50px;
+  background: #ffffff 0% 0% no-repeat padding-box;
+  border: 1px solid #4e94f4;
+  border-radius: 4px;
+  opacity: 1;
+  padding-left: 15px;
+}
+#vendor-conPassword {
+  position: absolute;
+  top: 385px;
+  width: 325px;
+  height: 50px;
+  background: #ffffff 0% 0% no-repeat padding-box;
+  border: 1px solid #4e94f4;
+  border-radius: 4px;
+  opacity: 1;
+  padding-left: 15px;
+}
+
+#signin-btn {
+  position: absolute;
+  top: 480px;
+  left: 39px;
+  color: #4e94f4;
+  font-size: 15px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+#vendor-btn2 {
+  position: absolute;
+  top: 480px;
+  left: 285px;
+  background-color: #4e94f4;
+  color: white;
+  width: 92px;
+  height: 38px;
+  border: 1px solid grey;
+  font-size: 15px;
+  border-radius: 8px;
+  cursor: pointer;
+}

@@ -1,0 +1,228 @@
+body{
+  font-family: "Open Sans", sans-serif;
+}
+
+.div-main {
+  background-image: url("./images/party-people-enjoy-concert-at-festival-summer-DHDMPWH.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: "Open Sans", sans-serif;
+  height: 100vh;
+  margin-top:-20px;
+}
+.icon-span {
+  font-size: 25px;
+  color: #C5C5C5;
+  position: absolute;
+  top: 145px;
+  left: 310px;
+
+}
+
+.icon-span:hover {
+  cursor: pointer;
+  color: #000000;
+}
+
+#main-logo{
+    margin-left: 40px;
+}
+#side-heading,
+#main-logo {
+  color: rgb(255, 255, 255);
+}
+#container {
+  position: relative;
+}
+
+#vendor-password-2{
+  border-color: 1px solid red;
+}
+#sub-container-1 {
+  position: absolute;
+  top: 200px;
+  left: 118px;
+  width: 530px;
+  height: 288px;
+  font-size: 35px;
+  font-family: "Open Sans", sans-serif;
+  letter-spacing: 3.5px;
+}
+
+#sub-container-2 {
+  position: absolute;
+  top: 80px;
+  left: 1000px;
+  width: 450px;
+  height: 450px;
+  border-radius: 8px;
+}
+
+#form-heading{
+    color: #1B2734;
+    letter-spacing: 0.53px;
+    font-family: "Open Sans", sans-serif;
+    font-size: 19px;
+}
+
+#form-container{
+    position: relative;
+  
+}
+
+#errMsg{
+  position: absolute;
+  top: 35px;
+  color: red;
+  width:225px;
+  font-size:12px;
+}
+
+#error-msg-2{
+  position: absolute;
+  top: 190px;
+  font-size: 12px;
+  color:red;
+}
+#vendor-contact{
+    position: absolute;
+    top: 55px;
+    width: 325px;
+    height: 50px;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    border: 1px solid #4E94F4;
+    border-radius: 4px;
+    opacity: 1;
+    padding-left: 15px;
+}
+
+#vendor-password{
+    position: absolute;
+    top: 130px;
+    width: 325px;
+    height: 50px;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    border: 1px solid #4E94F4;
+    border-radius: 4px;
+    opacity: 1;
+    padding-left: 15px;
+}
+
+#vendor-btn{
+    position: absolute;
+    top: 230px;
+    left: 250px;
+    background-color: #4E94F4;
+    color: white;
+    width: 92px;
+    height: 38px;
+    border: 1px solid grey;
+    font-size: 15px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+#forget-password{
+    font-size: 14px;
+    width: 120px;
+    height:19px;
+    color:#04425A;
+    position: absolute;
+    top: 187px;
+    left: 225px;
+    cursor: pointer;
+}
+
+#create-account{
+    color: #4E94F4;
+    font-weight: 600;
+    position: absolute;
+    top: 250px;
+    cursor: pointer;
+}
+.container1 {
+    max-width: 400px;
+    border-radius: 10px;
+    margin: 30px auto;
+    
+  }
+  
+  .box {
+    box-shadow: 0 3px 12px rgba(0,0,0,0.15);
+    background-color: #fff;
+    border-radius: 3px;
+    overflow: hidden;
+    width: 400px;
+    height: 400px;
+  }
+  
+  .box.expanded {
+    position: absolute;
+    top: -20px;
+    height: 548px; 
+  }
+
+  .tab-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    position: relative;
+  }
+  
+
+  .tab-list::before {
+    content: '';
+    display: block;
+    height: 2px;
+    width: 50%;
+    position: absolute;
+    bottom: 0;
+    background-color: #aaa;
+    transition: .3s;
+  }
+  
+  .tab-item {
+    flex: 1;
+    text-align: center;
+    transition: .3s;
+    opacity: 0.5;
+  }
+  
+  .tab-toggle {
+    display: none;
+  }
+  
+  .tab-content {
+    display: none;
+
+  }
+  
+  .tab-toggle:nth-child(1):checked ~ .tab-list .tab-item:nth-child(1),
+  .tab-toggle:nth-child(2):checked ~ .tab-list .tab-item:nth-child(2) {
+    opacity: 1;
+  }
+  
+  
+  .tab-toggle:nth-child(2):checked ~ .tab-list::before {
+    transform: translateX(100%);
+  }
+  
+  
+  
+  .tab-toggle:nth-child(1):checked ~ .tab-container .tab-content:nth-child(1),
+  .tab-toggle:nth-child(2):checked ~ .tab-container .tab-content:nth-child(2) {
+    display: block;
+  }
+  
+  .tab-trigger {
+    display: block;
+    padding: 10px 0;
+    cursor: pointer;
+    border: 1px solid rgba(70, 68, 68, 0.21);
+    color: #4E94F4;
+  }
+  
+  .tab-container {
+    padding: 15px 30px;
+    height: 500px;
+  }
