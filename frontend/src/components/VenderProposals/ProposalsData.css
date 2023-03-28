@@ -1,0 +1,133 @@
+.total-container{
+    width:100%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.imported-header {
+  width: 100%;
+}
+.total-proposals-container{
+  position: absolute;
+  top: 60px;
+    width: 80%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.container {
+  background: #ffffff 0% 0% no-repeat padding-box;
+  box-shadow: 0px 3px 6px #00000029;
+  border: 1px solid #425e81;
+  border-radius: 4px;
+  opacity: 1;
+  max-width: 1200px;
+  height: 10em;
+  margin-bottom: 15px;
+}
+.eventName-heading {
+  text-align: left;
+  padding-left: 1.5em;
+  padding-top: 1em;
+}
+.eventName-heading {
+  font: normal normal medium 1.25em Helvetica Neue;
+  font-weight: bold;
+  letter-spacing: 0.6px;
+  color: #081838;
+}
+.eventName-heading p {
+  font-weight: normal;
+  font: normal normal normal 1em Helvetica Neue;
+  letter-spacing: 0.48px;
+  color: #081838;
+  margin-top: 0.5em;
+}
+
+.events-container {
+  justify-content: space-between;
+  margin-left: 10px;
+  padding-left: 1.5em;
+  padding-right: 1.5em;
+}
+.container-row {
+  column-gap: 5em;
+}
+.container-row div {
+  text-align: left;
+  font: normal normal normal 1em Helvetica Neue;
+  letter-spacing: 0.48px;
+  color: #aaaaaa;
+}
+.container-row div p {
+  text-align: left;
+  font: normal normal medium 1.25em Helvetica Neue;
+  letter-spacing: 0.54px;
+  color: #081838;
+  font-weight: bold;
+}
+.edit-delete-container{
+  margin-left: 25px;
+}
+
+.edit-delete-container > button {
+  background: none;
+  border: none;
+}
+.edit-delete-container > button {
+  margin: 1em;
+}
+
+.header-search-box {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 5em;
+  margin-left: 1em;
+  margin-bottom: 0;
+  margin-top: 2em;
+}
+.create-button {
+  width: 8em;
+  height: 3.5em;
+  background: #4e94f4 0% 0% no-repeat padding-box;
+  border-radius: 8px;
+  font: normal normal bold 1em Open Sans;
+  letter-spacing: 0.25em;
+  color: #ffffff;
+  text-transform: uppercase;
+  opacity: 1;
+  border-color: #4e94f4;
+}
+.create-button:-webkit-any-link {
+  text-decoration: none;
+  color: inherit;
+}
+.proposals-search-container {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  column-gap: 2em;
+}
+.filter-create-container span {
+  margin-right: 2em;
+}
+.proposals-search-container input {
+  font: normal normal normal 1em Helvetica Neue;
+  color: #c7c7c7;
+  width: 7.5em;
+  height: 1em;
+}
+.proposals-search-container h1 {
+  margin: auto;
+  font-size: 2em;
+}
+.proposals-search-container section {
+  margin: auto;
+}
+
+.imported-header{
+  position: fixed;
+}
