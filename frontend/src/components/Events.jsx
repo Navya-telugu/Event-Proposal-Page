@@ -27,7 +27,7 @@ const Products = ({ items }) => {
       alert("Please login first");
       navigate("/");
     }else{
-      axios.get("http://localhost:8080/vendorDetails").then((res) => {
+      axios.get("https://event-proposal-page-dp1n.onrender.com/vendorDetails").then((res) => {
       setVendorName(res.data.data[res.data.data.length-1]);
     });
     }
