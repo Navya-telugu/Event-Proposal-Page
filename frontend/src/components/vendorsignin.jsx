@@ -43,7 +43,7 @@ const VendorSignIn = () => {
         "content-type": "application/json",
       },
     };
-    axios.post("http://localhost:8080/venderlogin", data, config)
+    axios.post("https://event-proposal-page-dp1n.onrender.com/venderlogin", data, config)
       .then((res) => {
         localStorage.setItem("token", res.data.jwt_token);
 
