@@ -14,7 +14,7 @@ function App() {
   useEffect(()=>{
     
     async function getAllProducts(){
-      axios.get("http://localhost:8080/proposalsData").then((res)=>{
+      axios.get("https://event-proposal-page-dp1n.onrender.com/proposalsData").then((res)=>{
         setItems(res.data.data)
         console.log(res.data.data);
       })
