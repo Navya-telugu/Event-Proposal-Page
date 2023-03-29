@@ -25,7 +25,7 @@ const VendorSignUp = (props) => {
         "content-type": "application/json",
       },
     };
-    axios.post("http://localhost:8080/register", data, config).then((res) => {
+    axios.post("https://event-proposal-page-dp1n.onrender.com/register", data, config).then((res) => {
       setData({})
       setErrormsg1("Registration Done Go and SignIn")
     })
