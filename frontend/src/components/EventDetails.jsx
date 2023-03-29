@@ -24,7 +24,7 @@ const ProductDetails = () => {
 
   console.log(eventImages);
   useEffect(() => {
-    axios.get("http://localhost:8080/vendorDetails").then((res) => {
+    axios.get("https://event-proposal-page-dp1n.onrender.com/vendorDetails").then((res) => {
       setVendorName(res.data.data[0]);
     });
     async function getProductDetails() {
