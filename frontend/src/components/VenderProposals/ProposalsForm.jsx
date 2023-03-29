@@ -99,7 +99,7 @@ const ProposalsForm = () => {
       postImage:postImage,
 
     }
-axios.post("http://localhost:8080/createProposals",objsubmit)
+axios.post("https://event-proposal-page-dp1n.onrender.com/createProposals",objsubmit)
 .then(response=>console.log(response))
 .then(()=>navigate("/proposalsData/"))
 .catch(error=>console.log(error))
